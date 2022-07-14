@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:rental_app/pages/payment/promo_item.dart';
 import 'package:rental_app/utils/colors.dart';
@@ -11,7 +10,7 @@ class UnpaidPage extends StatefulWidget {
 class _UnpaidPageState extends State<UnpaidPage> {
   @override
   Widget build(BuildContext context) {
-    Widget payNow = InkWell(
+    Widget printInvoice = InkWell(
 //      onTap: () => Navigator.of(context)
 //          .push(MaterialPageRoute(builder: (_) => ViewProductPage())),
       child: Container(
@@ -28,7 +27,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("Pay Now",
+          child: Text("Print",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,
@@ -58,7 +57,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Text(
-                                    'Unpaid',
+                                    'Summary statistics',
                                     style: TextStyle(
                                       color: darkGrey,
                                       fontSize: 22,
@@ -69,7 +68,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
                                 ],
                               ),
                             ),
-                            PromoItem(),
+                            //PromoItem(),
                             Container(
                               margin: const EdgeInsets.all(16.0),
                               padding: const EdgeInsets.fromLTRB(
@@ -84,20 +83,24 @@ class _UnpaidPageState extends State<UnpaidPage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   ListTile(
-                                    title: Text('Boat Rockerz 350 On-Ear ..'),
-                                    trailing: Text('74.68'),
+                                    title: Text('Total paid rent ..'),
+                                    trailing: Text('ksh 294000.68'),
+                                  ),
+                                  ListTile(
+                                    title: Text('Total  unpaid rent ..'),
+                                    trailing: Text('ksh -90000.58'),
+                                  ),
+                                   ListTile(
+                                    title: Text('Total  Monthly Expenses ..'),
+                                    trailing: Text('ksh -80000.58'),
                                   ),
                                   ListTile(
                                     title: Text('Tax'),
-                                    trailing: Text('1.25'),
+                                    trailing: Text(' 16%'),
                                   ),
                                   ListTile(
                                     title: Text('Subtotal'),
-                                    trailing: Text('76.93'),
-                                  ),
-                                  ListTile(
-                                    title: Text('Promocode'),
-                                    trailing: Text('-10.93'),
+                                    trailing: Text('ksh 219000.93'),
                                   ),
                                   Divider(),
                                   ListTile(
@@ -108,7 +111,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     trailing: Text(
-                                      '\$ 66.93',
+                                      '\Ksh 209000.93',
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
@@ -122,7 +125,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 20),
-                              child: payNow,
+                              child: printInvoice,
                             )
                           ]))))),
         ));

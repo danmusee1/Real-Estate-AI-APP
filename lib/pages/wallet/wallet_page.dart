@@ -91,7 +91,7 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          '\$',
+                          '\Ksh',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -99,7 +99,7 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                           ),
                         ),
                         SizedBox(width: 8.0),
-                        Text('54.24',
+                        Text('5000,000.24',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 48,

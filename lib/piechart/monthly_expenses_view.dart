@@ -6,9 +6,11 @@ import 'package:rental_app/pages/home/tenants_landloard.dart';
 import 'package:rental_app/pages/main/components/custom_bottom_bar.dart';
 import 'package:rental_app/pages/main/components/tab_view.dart';
 import 'package:rental_app/pages/notifications_page.dart';
+import 'package:rental_app/pages/payment/unpaid_page.dart';
 import 'package:rental_app/pages/profile_page.dart';
 import 'package:rental_app/pages/search_page.dart';
 import 'package:rental_app/pages/shop/check_out_page.dart';
+import 'package:rental_app/pages/wallet/wallet_page.dart';
 import 'package:rental_app/piechart/categories_row.dart';
 import 'package:rental_app/piechart/pie_chart_view.dart';
 import 'package:rental_app/utils/colors.dart';
@@ -101,6 +103,55 @@ class _MontlyExpensesViewState extends State<MontlyExpensesView>
             ],
           ),
         ),
+        //center page navigations
+        Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+          new GestureDetector(
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => RatingPage())),
+              child: Container(
+                height: 50,
+                child: Center(
+                  child: Text("Tenants"),
+                ),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 119, 160, 7),
+                  border: Border.all(width: 3, color: Colors.yellow),
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(10.0)),
+                ),
+              )),
+          new GestureDetector(
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => WalletPage())),
+              child: Container(
+                height: 50,
+                child: Center(
+                  child: Text("Accounts"),
+                ),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 245, 171, 12),
+                  border: Border.all(
+                      width: 3, color: Color.fromARGB(255, 2, 17, 102)),
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(10.0)),
+                ),
+              )),
+          new GestureDetector(
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => UnpaidPage())),
+              child: Container(
+                height: 50,
+                margin: const EdgeInsets.only(top: 6.0),
+                child: Center(child: Text("Print Overview")),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 141, 162, 180),
+                  border: Border.all(
+                      width: 3, color: Color.fromARGB(255, 193, 214, 233)),
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(10.0)),
+                ),
+              ))
+        ]),
         Column(
           children: <Widget>[
             Spacer(),
