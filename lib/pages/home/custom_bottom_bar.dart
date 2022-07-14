@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rental_app/piechart/monthly_expenses_view.dart';
 
 class CustomBottomBar extends StatelessWidget {
   final TabController controller;
@@ -23,11 +24,13 @@ class CustomBottomBar extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Image.asset('assets/icons/category_icon.png'),
-            onPressed: () {
-              controller.animateTo(1);
-            },
-          ),
+              icon: Image.asset('assets/icons/category_icon.png'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MontlyExpensesView()),
+                );
+              }),
           IconButton(
             icon: SvgPicture.asset('assets/icons/cart_icon.svg'),
             onPressed: () {
