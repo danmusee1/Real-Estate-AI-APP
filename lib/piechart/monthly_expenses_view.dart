@@ -15,6 +15,7 @@ import 'package:rental_app/piechart/categories_row.dart';
 import 'package:rental_app/piechart/pie_chart_view.dart';
 import 'package:rental_app/utils/colors.dart';
 import 'package:rental_app/utils/dimensions.dart';
+import 'package:rental_app/widgets/icon_and_text_widget.dart';
 
 class MontlyExpensesView extends StatefulWidget {
   _MontlyExpensesViewState createState() => _MontlyExpensesViewState();
@@ -31,22 +32,7 @@ class _MontlyExpensesViewState extends State<MontlyExpensesView>
     bottomTabController = TabController(length: 4, vsync: this);
   }
 
-  Widget tabBar = TabBar(
-    tabs: [
-      Tab(text: 'Trending'),
-      Tab(text: 'Sports'),
-      Tab(text: 'Headsets'),
-      Tab(text: 'Wireless'),
-      Tab(text: 'Bluetooth'),
-    ],
-    labelStyle: TextStyle(fontSize: 16.0),
-    unselectedLabelStyle: TextStyle(
-      fontSize: 14.0,
-    ),
-    labelColor: darkGrey,
-    unselectedLabelColor: Color.fromRGBO(0, 0, 0, 0.5),
-    isScrollable: true,
-  );
+ 
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -111,10 +97,18 @@ class _MontlyExpensesViewState extends State<MontlyExpensesView>
               child: Container(
                 height: 50,
                 child: Center(
-                  child: Text("Tenants"),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconAndTextWidget(
+                            icon: Icons.circle_sharp,
+                            text: "Tenants",
+                            iconColor: AppColors.iconColor1)
+                      ]),
+                  //child: Text("Tenants"),
                 ),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 119, 160, 7),
+                  color: Color.fromARGB(255, 141, 162, 180),
                   border: Border.all(width: 3, color: Colors.yellow),
                   borderRadius:
                       BorderRadius.vertical(top: Radius.circular(10.0)),
@@ -126,12 +120,18 @@ class _MontlyExpensesViewState extends State<MontlyExpensesView>
               child: Container(
                 height: 50,
                 child: Center(
-                  child: Text("Accounts"),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconAndTextWidget(
+                            icon: Icons.circle_sharp,
+                            text: "Accounts",
+                            iconColor: AppColors.iconColor1)
+                      ]),
                 ),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 245, 171, 12),
-                  border: Border.all(
-                      width: 3, color: Color.fromARGB(255, 2, 17, 102)),
+                  color: Color.fromARGB(255, 141, 162, 180),
+                  border: Border.all(width: 3, color: Colors.yellow),
                   borderRadius:
                       BorderRadius.vertical(top: Radius.circular(10.0)),
                 ),
@@ -142,7 +142,16 @@ class _MontlyExpensesViewState extends State<MontlyExpensesView>
               child: Container(
                 height: 50,
                 margin: const EdgeInsets.only(top: 6.0),
-                child: Center(child: Text("Print Overview")),
+                child: Center(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconAndTextWidget(
+                            icon: Icons.circle_sharp,
+                            text: "Print Over view",
+                            iconColor: AppColors.iconColor1)
+                      ]),
+                ),
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 141, 162, 180),
                   border: Border.all(

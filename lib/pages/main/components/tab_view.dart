@@ -83,24 +83,6 @@ class TabView extends StatelessWidget {
             ),
             Flexible(child: RecommendedList())
           ]),
-          Column(children: <Widget>[
-            SizedBox(
-              height: 16.0,
-            ),
-            Flexible(child: RecommendedList())
-          ]),
-          Column(children: <Widget>[
-            SizedBox(
-              height: 16.0,
-            ),
-            Flexible(child: RecommendedList())
-          ]),
-          Column(children: <Widget>[
-            SizedBox(
-              height: 16.0,
-            ),
-            Flexible(child: RecommendedList())
-          ]),
         ]);
   }
 }

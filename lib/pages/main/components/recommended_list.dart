@@ -26,7 +26,7 @@ class RecommendedList extends StatelessWidget {
               ),
               Center(
                   child: Text(
-                'Recommended',
+                'Add Property',
                 style: TextStyle(
                     color: darkGrey,
                     fontSize: 16.0,
