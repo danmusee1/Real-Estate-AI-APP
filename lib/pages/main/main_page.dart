@@ -209,6 +209,7 @@ class _MainPageState extends State<MainPage>
                 body: TabView(
                   tabController: tabController,
                 ),
+                
               ),
             ),
             CategoryListPage(),

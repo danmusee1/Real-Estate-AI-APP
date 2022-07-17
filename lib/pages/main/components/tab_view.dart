@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rental_app/models/category.dart';
+import 'package:rental_app/utils/colors.dart';
+import 'package:rental_app/utils/dimensions.dart';
 import 'category_card.dart';
 import 'recommended_list.dart';
 
@@ -70,6 +72,18 @@ class TabView extends StatelessWidget {
                         itemBuilder: (_, index) => CategoryCard(
                               category: categories[index],
                             ))),
+                Center(
+                  child: Container(
+                    width: Dimensions.height45,
+                    height: Dimensions.height45,
+                    child: Icon(Icons.add_circle,
+                        color: Colors.white, size: Dimensions.iconSize24),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(Dimensions.radius15),
+                      color: AppColors.mainColor,
+                    ),
+                  ),
+                ),
                 SizedBox(
                   height: 16.0,
                 ),
