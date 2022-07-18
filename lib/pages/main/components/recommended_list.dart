@@ -6,8 +6,6 @@ import 'package:rental_app/products/product_page.dart';
 import 'package:rental_app/utils/colors.dart';
 
 class RecommendedList extends StatelessWidget {
- 
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,7 +24,7 @@ class RecommendedList extends StatelessWidget {
               ),
               Center(
                   child: Text(
-                'Add Property',
+                'Added Properties',
                 style: TextStyle(
                     color: darkGrey,
                     fontSize: 16.0,

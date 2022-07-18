@@ -58,43 +58,69 @@ class TabView extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         controller: tabController,
         children: <Widget>[
-          Container(
+          Expanded(
+              child: Container(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Container(
-                    margin: EdgeInsets.all(8.0),
-                    height: MediaQuery.of(context).size.height / 9,
-                    width: MediaQuery.of(context).size.width,
-                    child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: categories.length,
-                        itemBuilder: (_, index) => CategoryCard(
-                              category: categories[index],
-                            ))),
+                SizedBox(
+                  height: 20,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      IntrinsicHeight(
+                        child: Container(
+                          margin: const EdgeInsets.only(left: 16.0, right: 8.0),
+                          width: 4,
+                          color: mediumYellow,
+                        ),
+                      ),
+                      Center(
+                          child: Text(
+                        'Add Property',
+                        style: TextStyle(
+                            color: darkGrey,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold),
+                      )),
+                    ],
+                  ),
+                ),
                 Center(
                   child: Container(
-                    width: Dimensions.height45,
-                    height: Dimensions.height45,
+                    width: Dimensions.height40,
+                    height: Dimensions.height40,
                     child: Icon(Icons.add_circle,
-                        color: Colors.white, size: Dimensions.iconSize24),
+                        color: Colors.white, size: Dimensions.iconSize27),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Dimensions.radius15),
                       color: AppColors.mainColor,
                     ),
                   ),
                 ),
+                //Container(
+                //   margin: EdgeInsets.all(8.0),
+                //  height: MediaQuery.of(context).size.height / 9,
+                //  width: MediaQuery.of(context).size.width,
+                // child: ListView.builder(
+                //   scrollDirection: Axis.horizontal,
+                //   itemCount: categories.length,
+                //   itemBuilder: (_, index) => CategoryCard(
+                //        category: categories[index],
+                //      ))),
+
                 SizedBox(
                   height: 16.0,
                 ),
                 Flexible(child: RecommendedList()),
               ],
             ),
-          ),
+          )),
           Column(children: <Widget>[
-            SizedBox(
+            Expanded(
+                child: SizedBox(
               height: 16.0,
-            ),
+            )),
             Flexible(child: RecommendedList())
           ]),
         ]);

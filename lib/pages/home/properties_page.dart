@@ -101,7 +101,7 @@ class _PropertiesPageBodyState extends State<PropertiesPageBody> {
         ListView.builder(
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount: 10,
+            itemCount: 5,
             itemBuilder: (context, index) {
               return Container(
                 margin: EdgeInsets.only(
