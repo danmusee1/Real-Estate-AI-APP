@@ -27,6 +27,7 @@ import 'package:rental_app/products/components/shop_bottomSheet.dart';
 import 'package:rental_app/products/components/shop_product.dart';
 import 'package:rental_app/products/product_page.dart';
 import 'package:rental_app/products/view_product_page.dart';
+import 'package:rental_app/tenants/Screens/Home.dart';
 import 'package:rental_app/tenants/chat_page/homePage.dart';
 
 void main() async {
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: MyHomePage(),
     );
   }
 }

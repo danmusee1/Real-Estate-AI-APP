@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:rental_app/pages/address/address_form.dart';
 import 'package:rental_app/pages/home/select_card.dart';
+import 'package:rental_app/tenants/NavBar.dart';
 import 'package:rental_app/utils/colors.dart';
 
 class AddAddressPage extends StatelessWidget {
@@ -10,9 +10,8 @@ class AddAddressPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget finishButton = InkWell(
-      onTap:()=> Navigator.of(context).push(
-          MaterialPageRoute(
-              builder: (_) => SelectCardPage())),
+      onTap: () => Navigator.of(context)
+          .push(MaterialPageRoute(builder: (_) => SelectCardPage())),
       child: Container(
         height: 80,
         width: MediaQuery.of(context).size.width / 1.5,
@@ -38,6 +37,7 @@ class AddAddressPage extends StatelessWidget {
     );
 
     return Scaffold(
+      drawer: NavBar(),
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         backgroundColor: Colors.transparent,

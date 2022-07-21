@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rental_app/models/chatUsersModel.dart';
+import 'package:rental_app/tenants/NavBar.dart';
 import 'package:rental_app/widgets/conversationList.dart';
 
 class ChatPage extends StatefulWidget {
@@ -53,6 +54,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(

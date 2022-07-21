@@ -6,10 +6,23 @@ import 'package:rental_app/pages/tracking_page.dart';
 import 'package:rental_app/pages/wallet/wallet_page.dart';
 import 'package:rental_app/utils/colors.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePageT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        iconTheme: IconThemeData(color: darkGrey),
+        title: Text(
+          'Add Address',
+          style: const TextStyle(
+              color: darkGrey,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Montserrat",
+              fontSize: 18.0),
+        ),
+      ),
       backgroundColor: Color(0xffF9F9F9),
       body: SafeArea(
         top: true,

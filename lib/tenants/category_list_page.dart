@@ -55,7 +55,9 @@ class _CategoryListPageTState extends State<CategoryListPageT> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return 
+    
+     Material(
       color: Color(0xffF9F9F9),
       child: Container(
         margin: const EdgeInsets.only(top: kToolbarHeight),
